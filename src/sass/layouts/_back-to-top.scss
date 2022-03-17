@@ -1,0 +1,32 @@
+.back_to_top {
+  position: fixed;
+  bottom: 200px;
+  right: 40px;
+  z-index: 9999;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  font-size: 30px;
+  line-height: 52px;
+  background: #b8b6b6;
+  color: white;
+  cursor: pointer;
+  border-radius: 2px;
+  display: none;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.back_to_top:hover {
+  background: #828282;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.back_to_top-show {
+  display: block;
+}

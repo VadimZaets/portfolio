@@ -1,0 +1,28 @@
+.portfolio {
+  padding: 110px 0;
+}
+.portfolio__list--frame {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+}
+
+.portfolio__img {
+  padding-bottom: 40px;
+}
+.portfolio__link {
+  font-size: 18px;
+  line-height: 1.22;
+  text-align: center;
+  text-decoration-line: underline;
+  margin-bottom: 90px;
+  padding: 0;
+  color: black;
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.portfolio__link:hover,
+.portfolio__link:focus {
+  color: #828282;
+}

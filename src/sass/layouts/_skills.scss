@@ -1,0 +1,41 @@
+.skills {
+  padding: 110px 0;
+}
+.skills_list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.skills__blocks--icon {
+  width: 65px;
+  height: 70px;
+}
+.html-icon {
+  fill: #ff6600;
+}
+.css-icon {
+  fill: #0099ff;
+}
+.skills__blocks {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @media screen and (max-width: 760px) {
+    padding-bottom: 10px;
+    flex-basis: calc(100% / 2);
+  }
+}
+.skills__text {
+  font-size: 18px;
+  line-height: 1.22;
+  text-align: center;
+  padding: 60px 0;
+}
+.skills__blocks--title {
+  font-size: 14px;
+  line-height: 1.28;
+  text-align: center;
+  padding-top: 20px;
+  color: #828282;
+}
