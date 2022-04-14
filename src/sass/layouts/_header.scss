@@ -1,18 +1,135 @@
+.header {
+  position: fixed;
+  top: 0;
+  background-color: white;
+  z-index: 100;
+  width: 100%;
+}
 .main__nav {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   border-bottom: solid #828282 1px;
 }
-.link__nav {
+.site-nav {
+  display: flex;
+  align-items: center;
+}
+
+.site-nav__item--link {
+  
   color: #828282;
-  margin: 30px 0;
+
   font-size: 18px;
   line-height: 1.22;
-  transition-property: color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  letter-spacing: 0.02em;
+  font-weight: 500;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  text-decoration: none;
+
+
 }
-.link__nav:hover,
-.link__nav:focus {
+
+.site-nav__item--link:hover,
+.site-nav__item--link:focus {
   color: black;
+}
+
+.site-nav__item {
+  &:not(:last-child) {
+    margin-right: 50px;
+  }
+}
+
+@media screen and (min-width: 1140px) {
+  .site-nav__item--link:hover::after {
+    transform: scaleX(1);
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .site-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-bottom: 302px;
+  }
+
+  .site-nav__item--link {
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 1.18;
+    letter-spacing: 0.02em;
+  }
+
+  .site-nav__item {
+    margin-bottom: 36px;
+  }
+}
+// .link__nav {
+//   color: #828282;
+//   margin: 30px 0;
+//   font-size: 18px;
+//   line-height: 1.22;
+//   transition-property: color;
+//   transition-duration: 250ms;
+//   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+// }
+// .link__nav:hover,
+// .link__nav:focus {
+//   color: black;
+// }
+.menu__button {
+  display: inline-flex;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+
+  @media screen and (min-width: 767px) {
+    display: none;
+  }
+}
+
+.menu__button .icon__close {
+  display: none;
+}
+
+.menu__button.is-open .icon__close {
+  display: block;
+}
+
+.menu__button.is-open .icon__menu {
+  display: none;
+}
+
+.menu-container {
+  padding: 20px;
+  text-align: center;
+  font-size: 20px;
+
+  @media screen and (max-width: 767px) {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 796px;
+    z-index: 3;
+
+    background-color: #f5f4fa;
+  }
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    align-items: center;
+    padding-left: 88px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .menu-container.is-open {
+    display: block;
+  }
 }

@@ -1,11 +1,25 @@
-<header>
+<header class="header">
 	<div class="container">
 		<nav class="main__nav">
-			<a href="" class="link__nav lang">Home</a>
-			<a href="#t1" class="link__nav">About me</a>
-			<a href="#t2" class="link__nav">Skills</a>
-			<a href="#t3" class="link__nav">Portfolio</a>
-			<a href="#t4" class="link__nav">Contacts</a>
+			<a href="" class="site-nav__item--link">Home</a>
+			<button type="button" class="menu__button is-open" aria-expanded="false" aria-controls="menu-container"
+				data-menu-button>
+				<svg width="24px" height="24px" aria-label="Переключатель мобильного меню">
+					<use class="icon__menu" href="./images/sprite.svg#menu"></use>
+					<use class="icon__close" href="./images/sprite.svg#close"></use>
+				</svg>
+			</button>
+			<div class="menu-container is-open" id="menu-container" data-menu>
+			<div class="container__nav">
+				<ul class="site-nav list">
+					<li class="site-nav__item"><a href="#t1" class="site-nav__item--link">About me</a></li>
+					<li class="site-nav__item"><a href="#t2" class="site-nav__item--link">Skills</a></li>
+					<li class="site-nav__item"><a href="#t3" class="site-nav__item--link">Portfolio</a></li> 
+					<li class="site-nav__item"><a href="#t4" class="site-nav__item--link">Contacts</a></li>
+				</ul>
+			</div>
+				</div>
+	
 		</nav>
 	</div>
 </header>
